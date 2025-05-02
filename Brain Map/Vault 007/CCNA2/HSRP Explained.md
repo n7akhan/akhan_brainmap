@@ -1,5 +1,5 @@
 
-# HSRP (Hot Standby Router Protocol) Explained
+# HSRP (Hot Standby Router Protocol) Explained!
 
 ## What is HSRP?
 **HSRP** is a Cisco redundancy protocol that allows multiple routers to act as a single **default gateway** for hosts. It ensures **high availability** by having backup routers ready to take over if the active one fails.
