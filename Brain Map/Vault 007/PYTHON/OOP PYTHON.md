@@ -65,6 +65,54 @@ blue
 Hi I am a Ford Mustang
 ```
 
+# STATUS OF ATTRIBUTES 
+**HOW TO MAKE THE CAR ENGINE START AND GO OFF**
+
+```
+class Vehicle:
+	def __init__(self,year,make,model,color):
+	self.year = year
+	self.make = make
+	self.model = model
+	self.color = color
+	self.engineStatus = False
+
+	def startUp(self):
+	if self.engineStatus == False:
+		self.engineStatus = True:
+		print("Vroooom")
+	else:
+		print("Sorry engine is already on!")
+
+	def shutDown(self):
+	if self.engineStatus == True:
+		self.engineStatus = False:
+		print("puttputtt shutdown")
+	else:
+		print("Sorry engine is already shutdown!")
+
+v1 = Vehicle(1969,"Ford","Mustang","Blue")
+v1.startUp()
+v1.startUp()
+v1.shutDown()
+v1.shutDown()
+v1.startUp()
+```
+
++ Here we created the vehicle object and gave it a turn off (false) status for engine but calling it twice does not logically make sense since engine cannot be turned on twice! 
++ Same goes for shutDown() method! You cannot shut it down twice
+
+**OUTPUT**
+```
+Vroom!
+Engine already on
+Putt puttt engine off
+Engine is already off
+VROOM!
+```
+
+**THIS showcases how the __init__ method works! This constructor and how to manipulate some of the values and how objects start with these!**
+
 # BLACK BOX OBJECTS (PROTECT THEM)
 
 + I can change my objects data or anyone can to mess it up I can take the year of the car and assign it a new value and save it.
