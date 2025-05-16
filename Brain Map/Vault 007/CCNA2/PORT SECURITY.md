@@ -36,3 +36,15 @@ S1(config-if)#switchport port-security maximum {how ever many devices}
 S1(config-if)#switchport port-security mac-address aaaa.bbbb.1234
 S1(config-if)#switchport port-security mac-address sticky (THIS REMEMBERS TO CURRENT DEVICE MAC ADDRESS)
 ```
+
++ To allow a certain amount of devices to connect to a specific port tracking them within MAC addresses
+```
+S1(config-if)#switchport port-security maximum {how ever many devices}
+S1(config-if)#switchport port-security mac-address aaaa.bbbb.1234
+S1(config-if)#switchport port-security mac-address sticky (THIS REMEMBERS TO CURRENT DEVICE MAC ADDRESS)
+```
+
++ If some one violates you can restrict them, shut it down or protect! This happens when someone other then the listed MAC addresses links into the port! 
+```
+S1(config-if)#switchport port-security violation {protect} {shutdown} {restrict}
+```
