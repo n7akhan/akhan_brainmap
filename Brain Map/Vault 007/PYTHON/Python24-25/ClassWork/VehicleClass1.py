@@ -7,7 +7,7 @@
 #Project Description:
 #==========================================================#
 '''
-This project will call on the vehile construtor and create two vehicle objects with attributes
+This project will call on the vehicle construtor and create two vehicle objects with attributes
 '''
 #==========================================================#
 # ::Variables::
@@ -27,6 +27,19 @@ class Vehicle:
         self.model = model
         self.color = color
         self.engineStatus = False
+
+    #make a carShow method that shows the cars attribute
+    
+    def carShow(self):
+        print(f"""
+        {"=" * 30}
+        Year ::: {self.year}
+        Make ::: {self.make}
+        Model ::: {self.model}
+        Color ::: {self.color}
+        {"=" * 30}
+        """)
+
 
     #make a start up method that takes in self as a argument
 
@@ -58,3 +71,5 @@ v1.shutDown()
 v1.shutDown()
 v1.startUp()
 v1.shutDown()
+
+v2.carShow()
